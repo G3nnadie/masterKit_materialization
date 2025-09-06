@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/stylesheet.css">
   <!-- Fonts END -->
 
   <link rel="stylesheet" href="css/reset.css">
@@ -54,7 +56,7 @@
           <div class="hero__text">
             <p><span>Впервые:</span> демонстрация технологии проработки на новом уровне методики Master Kit</p>
             <div class="hero__btn fx fx-end">
-              <a href="#" class="btn btn--primary flex-center"><b>Участвовать</b></a>
+              <a href="#" class="btn btn--primary flex-center open-modal-reg"><b>Участвовать</b></a>
             </div>
           </div>
           <div class="hero__desc">
@@ -150,7 +152,7 @@
                 <li>После этого вы получите билет на почту или в мессенджер</li>
               </ul>
               <div class="ticket__btn fx">
-                <a href="#" class="btn btn--primary flex-center">Получить билет бесплатно</a>
+                <a href="#" class="btn btn--primary flex-center open-modal-reg">Получить билет бесплатно</a>
               </div>
             </div>
           </div>
@@ -160,7 +162,7 @@
               <p>Стоимость участия </p>
               <strong>7 000 руб</strong>
               <div class="ticket__btn fx">
-                <a href="#" class="btn btn--second flex-center">Купить билет</a>
+                <a href="#" class="btn btn--second flex-center open-modal-reg">Купить билет</a>
               </div>
             </div>
           </div>
@@ -181,7 +183,57 @@
 
   </div>
 
+  <!-- Modal -->
+
+  <div class="modal modal--reg">
+    <div class="fullScreen flex-center">
+      <div class="modal__box">
+        <button class="modal__close"></button>
+        <p class="modal__title">Для регистрации на встречу, необходимо заполнить данные ниже</p>
+        <form action="#" class="form modal__form">
+          <label class="form__field">
+            <strong>Имя</strong>
+            <span>
+              <input type="text" placeholder="Введите ваше имя">
+              <i style="background: url('img/svg/i-user.svg') center/contain no-repeat;"></i>
+            </span>
+          </label>
+          <label class="form__field">
+            <strong>Телефон</strong>
+            <span>
+              <input type="text" placeholder="+7" class="phone-mask">
+              <i style="background: url('img/svg/i-tel.svg') center/contain no-repeat;"></i>
+            </span>
+          </label>
+          <label class="form__field">
+            <strong>Email</strong>
+            <span>
+              <input type="text" placeholder="example@mail.com">
+              <i style="background: url('img/svg/i-mail.svg') center/contain no-repeat;"></i>
+            </span>
+          </label>
+          <button class="btn btn--primary flex-center">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+
+  <div class="modal modal--success">
+    <div class="fullScreen flex-center">
+      <div class="modal__box">
+        <button class="modal__close"></button>
+        <p class="modal__title"><span class="color-primary">Поздравляем</span> с успешной регистрацией!</p>
+        <div class="paragraph">
+          <p>Сотрудник службы заботы свяжется с вами в ближайшее время для подтверждения ваших данных и предоставления билета на встречу.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="libs/jquery/jquery.min.js"></script>
   <script src="libs/wavesurfer/wavesurfer.min.js"></script>
+  <script src="libs/maskedinput/jquery.maskedinput.min.js"></script>
   <script src="js/main.js"></script>
   <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
   <!-- Google Analytics counter --><!-- /Google Analytics counter -->

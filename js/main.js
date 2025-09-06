@@ -1,3 +1,37 @@
+
+
+$(document).ready(function () {
+
+  // Modal
+  $('.open-modal-reg').on('click', function(e) {
+    e.preventDefault();
+    $('.modal--reg').addClass('modal--open');
+  })
+
+  $('.open-modal-success').on('click', function(e) {
+    e.preventDefault();
+    $('.modal--success').addClass('modal--open');
+  })
+
+  $('.modal__close').on('click', function(e) {
+    $('.modal').removeClass('modal--open');
+  })
+
+  $('.modal').mouseup(function (e) {
+    let modalContent = $(".modal__box");
+    if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
+      $(this).removeClass('modal--open');
+    }
+  });
+
+  // Maskedinput
+  $(function($){
+    $('.phone-mask').mask(('+7 ') + '(999) 999-99-99');
+  });
+
+});
+
+
 const playBtn = document.getElementById("playBtn");
 const player = document.querySelector(".player"); // родительский блок
 
